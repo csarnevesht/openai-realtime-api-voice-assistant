@@ -1,0 +1,117 @@
+{
+  "name": "contact spreadsheet",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "8435854f-0272-491e-bc59-0017c9accf0a",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "id": "fcdf18be-0715-4fc8-8e2f-e0060689ed0f",
+      "name": "Webhook",
+      "webhookId": "8435854f-0272-491e-bc59-0017c9accf0a"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "15cso_YZcoaM3EFF529QPQQqh6IVhAnR4rEyU-XRc-AM",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15cso_YZcoaM3EFF529QPQQqh6IVhAnR4rEyU-XRc-AM/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.body.customerName }}",
+            "Availability": "={{ $json.body.customerAvailability }}",
+            "Notes": "={{ $json.body.specialNotes }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Availability",
+              "displayName": "Availability",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Notes",
+              "displayName": "Notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [220, 0],
+      "id": "7103a051-c24a-43a6-9c7e-8abc76108bc1",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "AiALREjTEZgon0pR",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": -1,
+    "timezone": "America/Los_Angeles"
+  },
+  "versionId": "4b3a8289-837d-4646-9ead-9c62f769422d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "56e5bc93532bde7c12a29564ac86172e38b7f0227a105efa40d66f5f4a90b10c"
+  },
+  "id": "k9wFsw1vXaKmv6JQ",
+  "tags": []
+}

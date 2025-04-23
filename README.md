@@ -4,8 +4,8 @@ This project implements an AI-powered inbound call agent for Bart's Automotive, 
 
 ## Video Instructions
 
-https://youtu.be/AZ0WziqO_QA?si=HORqrwjrbKnsuRZY  Part 1
-https://www.youtube.com/watch?v=ffDm4HVGuTM&t=11s Part 2
+- https://youtu.be/AZ0WziqO_QA?si=HORqrwjrbKnsuRZY  Part 1
+- https://www.youtube.com/watch?v=ffDm4HVGuTM&t=11s Part 2
 
 ## Features
 
@@ -66,3 +66,18 @@ This project is a demonstration and should be adapted for production use, includ
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Other notes
+
+This project uses n8n with a workflow that has a webhook url and is connected to Google sheets api.
+n8n is self-hosted in render.com at:
+https://dashboard.render.com/web/srv-d000gcuuk2gs73dohd50
+The n8n url is: https://n8n-i718.onrender.com/workflow/k9wFsw1vXaKmv6JQ
+The workflow json is in file n8n_contact_spreadsheet.json
+The twillio phone number is: (833) 702-6167
+OpenAPI info: https://platform.openai.com/api-keys
+Google sheet: openai-realtime-api-voice-assistant
+
+
+
+
