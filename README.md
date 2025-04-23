@@ -4,7 +4,8 @@ This project implements an AI-powered inbound call agent for Bart's Automotive, 
 
 ## Video Instructions
 
-https://youtu.be/AZ0WziqO_QA?si=HORqrwjrbKnsuRZY
+https://youtu.be/AZ0WziqO_QA?si=HORqrwjrbKnsuRZY  Part 1
+https://www.youtube.com/watch?v=ffDm4HVGuTM&t=11s Part 2
 
 ## Features
 
